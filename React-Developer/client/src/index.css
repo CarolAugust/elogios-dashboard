@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  /* Pizzattolog Palette */
+  --background: 14 52% 94%;           /* #f7eae6 */
+  --foreground: 0 0% 33%;             /* #545454 */
+
+  --primary: 23 90% 55%;              /* #f47424 (laranja) */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 354 5% 59%;            /* #9b9192 */
+  --secondary-foreground: 0 0% 33%;   /* #545454 */
+
+  --muted: 14 52% 94%;                /* #f7eae6 */
+  --muted-foreground: 0 0% 40%;
+
+  --accent: 347 83% 42%;              /* #c21239 (vermelho) */
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 347 83% 42%;         /* usa o vermelho como destructive */
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 354 5% 59%;               /* #9b9192 */
+  --input: 354 5% 59%;
+  --ring: 23 90% 55%;                 /* foco/outline no laranja */
+
+  --radius: 0.75rem;
+
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 33%; 
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 33%;
+       /* #545454 */
+}
+
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+  
+  --secondary: 217 32% 17%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 65%;
+  
+  --accent: 262 83% 65%;
+  --accent-foreground: 210 40% 98%;
+  
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 210 40% 98%;
+  
+  --border: 217 32% 17%;
+  --input: 217 32% 17%;
+  --ring: 224 76% 48%;
+
+  --card: 222 47% 11%;
+  --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight text-foreground;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-black/40 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-lg;
+  }
+  
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all duration-200 hover:bg-primary/5 hover:text-primary active:scale-[0.98];
+  }
+  
+  .sidebar-link.active {
+    @apply bg-primary text-primary-foreground shadow-md shadow-primary/25
+
+  }
+}

@@ -1,0 +1,2830 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "5",
+  "dialect": "mysql",
+  "tables": {
+    "all_plano": {
+      "name": "all_plano",
+      "columns": {
+        "id_pk": {
+          "autoincrement": false,
+          "name": "id_pk",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ID_PLANEJAMENTO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ID_PLANEJAMENTO",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "COD_UNIDADE": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "COD_UNIDADE",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NOME_UNIDADE": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NOME_UNIDADE",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "COD_CENTROCUSTO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "COD_CENTROCUSTO",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NOME_CENTROCUSTO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NOME_CENTROCUSTO",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ESTRUTURA_CONTA": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ESTRUTURA_CONTA",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ESTRUTURA_CONTA_NIVELSUPERIOR": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ESTRUTURA_CONTA_NIVELSUPERIOR",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NOME_CONTA": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NOME_CONTA",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CONTA_EXTERNA": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CONTA_EXTERNA",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "MES": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "MES",
+          "type": "char(2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ANO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ANO",
+          "type": "char(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "VALOR_ORCADO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "VALOR_ORCADO",
+          "type": "decimal(18,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "VALOR_REALIZADO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "VALOR_REALIZADO",
+          "type": "decimal(18,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "JUSTIFICATIVA": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "JUSTIFICATIVA",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "COD_PROJETO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "COD_PROJETO",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NOME_PROJETO": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NOME_PROJETO",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "cbk_contratos": {
+      "name": "cbk_contratos",
+      "columns": {
+        "ContractNumber": {
+          "autoincrement": false,
+          "name": "ContractNumber",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ContractIdentifier": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ContractIdentifier",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ContractInternalId": {
+          "autoincrement": false,
+          "name": "ContractInternalId",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "Currency": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Currency",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Modality": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Modality",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CreditDate": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CreditDate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OriginalDueDate": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OriginalDueDate",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "TotalTerm": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "TotalTerm",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ElapsedTerm": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ElapsedTerm",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "RemainingTerm": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "RemainingTerm",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "TotalPayments": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "TotalPayments",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "RemainingPayments": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "RemainingPayments",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "AverageTerm": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "AverageTerm",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ByRate_Amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ByRate_Amount",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ByRate_Principal": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ByRate_Principal",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ByRate_Interest": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ByRate_Interest",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ByRate_Restatement": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ByRate_Restatement",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ByRate_ExchangeVariation": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ByRate_ExchangeVariation",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ShortTerm_Amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ShortTerm_Amount",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ShortTerm_Principal": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ShortTerm_Principal",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ShortTerm_Interest": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ShortTerm_Interest",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ShortTerm_Restatement": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ShortTerm_Restatement",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ShortTerm_ExchangeVariation": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ShortTerm_ExchangeVariation",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "LongTerm_Amount": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "LongTerm_Amount",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "LongTerm_Principal": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "LongTerm_Principal",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "LongTerm_Interest": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "LongTerm_Interest",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "LongTerm_Restatement": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "LongTerm_Restatement",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "LongTerm_ExchangeVariation": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "LongTerm_ExchangeVariation",
+          "type": "decimal(18,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CompanyName": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CompanyName",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CompanyCNPJ": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CompanyCNPJ",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "BankName": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "BankName",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "BankNumber": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "BankNumber",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "BankCNPJ": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "BankCNPJ",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "MesAnoReferencia": {
+          "autoincrement": false,
+          "name": "MesAnoReferencia",
+          "type": "varchar(7)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "cbk_parcelas": {
+      "name": "cbk_parcelas",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "matchon_key": {
+          "autoincrement": false,
+          "name": "matchon_key",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "contract_internal_id": {
+          "autoincrement": false,
+          "name": "contract_internal_id",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "kind": {
+          "autoincrement": false,
+          "name": "kind",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "date": {
+          "autoincrement": false,
+          "name": "date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "order_info": {
+          "default": "'''N/A'''",
+          "autoincrement": false,
+          "name": "order_info",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "amount": {
+          "autoincrement": false,
+          "name": "amount",
+          "type": "decimal(15,2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "payment_date": {
+          "autoincrement": false,
+          "name": "payment_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bank_number": {
+          "autoincrement": false,
+          "name": "bank_number",
+          "type": "char(3)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bank_name": {
+          "autoincrement": false,
+          "name": "bank_name",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bank_fullname": {
+          "autoincrement": false,
+          "name": "bank_fullname",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bank_cnpj": {
+          "autoincrement": false,
+          "name": "bank_cnpj",
+          "type": "char(14)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "elogios_internos": {
+      "name": "elogios_internos",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "matricula": {
+          "autoincrement": false,
+          "name": "matricula",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "elogio": {
+          "autoincrement": false,
+          "name": "elogio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "motorista": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "motorista",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "latitude": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "latitude",
+          "type": "decimal(10,8)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "longitude": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "longitude",
+          "type": "decimal(11,8)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "maps_link": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "maps_link",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_hora": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "data_hora",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "telefone": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "telefone",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cidade": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cidade",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "estado": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "estado",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "token_avaliador": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "token_avaliador",
+          "type": "varchar(36)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "matricula": {
+          "name": "matricula",
+          "columns": [
+            "matricula"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "elogios_motoristas": {
+      "name": "elogios_motoristas",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "data_hora": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "data_hora",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nome": {
+          "autoincrement": false,
+          "name": "nome",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "carreta": {
+          "autoincrement": false,
+          "name": "carreta",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "telefone": {
+          "autoincrement": false,
+          "name": "telefone",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "elogio": {
+          "autoincrement": false,
+          "name": "elogio",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "latitude": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "latitude",
+          "type": "decimal(10,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "longitude": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "longitude",
+          "type": "decimal(10,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "maps_link": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "maps_link",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_agent": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_agent",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cidade": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cidade",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "estado": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "estado",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "token_avaliador": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "token_avaliador",
+          "type": "varchar(36)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_registro": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "data_registro",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "idx_bloqueio_elogio": {
+          "name": "idx_bloqueio_elogio",
+          "columns": [
+            "token_avaliador",
+            "carreta",
+            "data_registro"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "gbx_performance": {
+      "name": "gbx_performance",
+      "columns": {
+        "MotoristaID": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "MotoristaID",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NomeMotorista": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NomeMotorista",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "DocumentNumber": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "DocumentNumber",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "DataReferencia": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "DataReferencia",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Reward": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Reward",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "TotalKM": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "TotalKM",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Score": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Score",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id-pk": {
+          "autoincrement": false,
+          "name": "id-pk",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "gbx_statitics": {
+      "name": "gbx_statitics",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vehicle_identification": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "vehicle_identification",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "start_date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "start_date",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "end_date": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "end_date",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "average_speed": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "average_speed",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "consumption_average": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "consumption_average",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "odometer": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "odometer",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_consumption": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_consumption",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_breaking_on_high_speed": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_breaking_on_high_speed",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_breaking": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_breaking",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "total_mileage": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "total_mileage",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "glg_metasperformance": {
+      "name": "glg_metasperformance",
+      "columns": {
+        "mes": {
+          "autoincrement": false,
+          "name": "mes",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ano": {
+          "autoincrement": false,
+          "name": "ano",
+          "type": "year(4)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "operacao": {
+          "autoincrement": false,
+          "name": "operacao",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "meta_individual_placa": {
+          "autoincrement": false,
+          "name": "meta_individual_placa",
+          "type": "decimal(15,2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "meta_dedicado_operacao": {
+          "autoincrement": false,
+          "name": "meta_dedicado_operacao",
+          "type": "decimal(15,2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "meta_individual_km": {
+          "autoincrement": false,
+          "name": "meta_individual_km",
+          "type": "decimal(15,2)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id_logico": {
+          "autoincrement": false,
+          "name": "id_logico",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "glg_nps": {
+      "name": "glg_nps",
+      "columns": {
+        "DataResposta": {
+          "autoincrement": false,
+          "name": "DataResposta",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "Nome": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Nome",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Empresa": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Empresa",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaAtendimentoComercial": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaAtendimentoComercial",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaAtendimentoFinanceiro": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaAtendimentoFinanceiro",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaAtendimentoCliente": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaAtendimentoCliente",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaAtendimentoOperacional": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaAtendimentoOperacional",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaServicoOperadorLogistico": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaServicoOperadorLogistico",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaQualidadeEquipamentos": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaQualidadeEquipamentos",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "PontosPositivos": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "PontosPositivos",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "PontosMelhoria": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "PontosMelhoria",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NotaIndicacao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NotaIndicacao",
+          "type": "tinyint(4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ComentarioFinal": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ComentarioFinal",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "glg_veiculos_operacao": {
+      "name": "glg_veiculos_operacao",
+      "columns": {
+        "data_inicio": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "data_inicio",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "data_update": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "data_update",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "veiculo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "veiculo",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "grupo": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "grupo",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "operacao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "operacao",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "placa": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "placa",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "motorista": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "motorista",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "regional": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "regional",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "classificacao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "classificacao",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_logico": {
+          "autoincrement": false,
+          "name": "id_logico",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "mlt_conhecimentos": {
+      "name": "mlt_conhecimentos",
+      "columns": {
+        "ChaveCTe": {
+          "autoincrement": false,
+          "name": "ChaveCTe",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "NumeroCTe": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NumeroCTe",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Serie": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Serie",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "DataEmissao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "DataEmissao",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NomeEmitente": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NomeEmitente",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CNPJEmitente": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CNPJEmitente",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "NomeDestinatario": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "NomeDestinatario",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CNPJDestinatario": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CNPJDestinatario",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "MunicipioOrigem": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "MunicipioOrigem",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "MunicipioDestino": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "MunicipioDestino",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ValorPrestacao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ValorPrestacao",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Modal": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Modal",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "TipoServico": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "TipoServico",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Situacao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Situacao",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Localidade": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Localidade",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "ocorrencias_motoristas": {
+      "name": "ocorrencias_motoristas",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "data_hora": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "data_hora",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nome": {
+          "autoincrement": false,
+          "name": "nome",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "carreta": {
+          "autoincrement": false,
+          "name": "carreta",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "telefone": {
+          "autoincrement": false,
+          "name": "telefone",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tipo_ocorrencia": {
+          "autoincrement": false,
+          "name": "tipo_ocorrencia",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "descricao": {
+          "autoincrement": false,
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "latitude": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "latitude",
+          "type": "decimal(10,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "longitude": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "longitude",
+          "type": "decimal(10,6)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "maps_link": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "maps_link",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "user_agent": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "user_agent",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cidade": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cidade",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "estado": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "estado",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "sfw_tickets": {
+      "name": "sfw_tickets",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "whatsappId": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "whatsappId",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "queueId": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "queueId",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "userId": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "userId",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "feedbackScore": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "feedbackScore",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "summary": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "summary",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "createdAt": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "createdAt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "pendingAt": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "pendingAt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "acceptedAt": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "acceptedAt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "solvedAt": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "solvedAt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "closedAt": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "closedAt",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "contact_id",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "contact_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_email": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "contact_email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_number": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "contact_number",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "contact_profilePicUrl": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "contact_profilePicUrl",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tags": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tags",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "sorteio_inscricoes": {
+      "name": "sorteio_inscricoes",
+      "columns": {
+        "id": {
+          "default": "'uuid()'",
+          "autoincrement": false,
+          "name": "id",
+          "type": "char(36)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "full_name": {
+          "autoincrement": false,
+          "name": "full_name",
+          "type": "varchar(160)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cpf": {
+          "autoincrement": false,
+          "name": "cpf",
+          "type": "char(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "draw_date": {
+          "autoincrement": false,
+          "name": "draw_date",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "created_at": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "idx_draw_date": {
+          "name": "idx_draw_date",
+          "columns": [
+            "draw_date"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "uq_day_name": {
+          "name": "uq_day_name",
+          "columns": [
+            "draw_date",
+            "full_name"
+          ]
+        },
+        "uq_cpf": {
+          "name": "uq_cpf",
+          "columns": [
+            "cpf"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "tdw_folhaponto": {
+      "name": "tdw_folhaponto",
+      "columns": {
+        "IdUnico": {
+          "autoincrement": false,
+          "name": "IdUnico",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "EmployerCode": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "EmployerCode",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "EmployeeNumber": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "EmployeeNumber",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CH": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CH",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "PayrollAttendanceType": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "PayrollAttendanceType",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "BaseDate": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "BaseDate",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "IN1": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "IN1",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OUT1": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OUT1",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "IN2": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "IN2",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OUT2": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OUT2",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "IN3": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "IN3",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OUT3": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OUT3",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "RegularHours": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "RegularHours",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "WorkedHours": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "WorkedHours",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "WorkedHoursDay": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "WorkedHoursDay",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "WorkedHoursNight": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "WorkedHoursNight",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "WorkedHoursNightCalc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "WorkedHoursNightCalc",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "LateHoursCalc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "LateHoursCalc",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHours1": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHours1",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHours1Percent": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHours1Percent",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHours2": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHours2",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight1": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight1",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight1Calc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight1Calc",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight1Percent": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight1Percent",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight2": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight2",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight2Calc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight2Calc",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHours3": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHours3",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight3": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight3",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OvertimeHoursNight3Calc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OvertimeHoursNight3Calc",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "CompTime": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "CompTime",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OnCall": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OnCall",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OnCallWorked": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OnCallWorked",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Interwork": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Interwork",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "Allowance": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "Allowance",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OrdinaryHours": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OrdinaryHours",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OrdinaryNightHours": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OrdinaryNightHours",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OrdinaryNightCalcHours": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OrdinaryNightCalcHours",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "OrdinaryDiurnalHours": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "OrdinaryDiurnalHours",
+          "type": "decimal(10,4)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "tkcs_basekm_kmrodado": {
+      "name": "tkcs_basekm_kmrodado",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "bigint(20) unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chaveUnica": {
+          "autoincrement": false,
+          "name": "chaveUnica",
+          "type": "varchar(40)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "data": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "data",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "placa": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "placa",
+          "type": "char(7)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rodado_carregado": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "rodado_carregado",
+          "type": "decimal(10,1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "rodado_vazio": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "rodado_vazio",
+          "type": "decimal(10,1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "km_total": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "km_total",
+          "type": "decimal(10,1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultimo_odometro": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultimo_odometro",
+          "type": "decimal(12,1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultimo_envio": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultimo_envio",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultima_macro": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultima_macro",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultimo_local": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultimo_local",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultimo_status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultimo_status",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "veiID": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "veiID",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultima_movimentacao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultima_movimentacao",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "motivo_parada": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "motivo_parada",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "odometro_inicial": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "odometro_inicial",
+          "type": "decimal(12,1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "odometro_final": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "odometro_final",
+          "type": "decimal(12,1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dt_inicial": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "dt_inicial",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dt_final": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "dt_final",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ultima_tfr_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ultima_tfr_id",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "motorista": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "motorista",
+          "type": "varchar(120)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "idx_placa_data": {
+          "name": "idx_placa_data",
+          "columns": [
+            "placa",
+            "data"
+          ],
+          "isUnique": false
+        },
+        "idx_periodo": {
+          "name": "idx_periodo",
+          "columns": [
+            "dt_inicial",
+            "dt_final"
+          ],
+          "isUnique": false
+        },
+        "idx_veiid": {
+          "name": "idx_veiid",
+          "columns": [
+            "veiID"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "uk_chaveUnica": {
+          "name": "uk_chaveUnica",
+          "columns": [
+            "chaveUnica"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "tkcs_basekm_macrost": {
+      "name": "tkcs_basekm_macrost",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "bigint(20) unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tfrID": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tfrID",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cod": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cod",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "descricao": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "descricao",
+          "type": "varchar(150)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "status": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "status",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "idx_tfrID": {
+          "name": "idx_tfrID",
+          "columns": [
+            "tfrID"
+          ],
+          "isUnique": false
+        },
+        "idx_cod": {
+          "name": "idx_cod",
+          "columns": [
+            "cod"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "tkcs_controle": {
+      "name": "tkcs_controle",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "bigint(20) unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "chave": {
+          "autoincrement": false,
+          "name": "chave",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "valor": {
+          "autoincrement": false,
+          "name": "valor",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "atualizado_em": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "atualizado_em",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "tkcs_dadosveiculos": {
+      "name": "tkcs_dadosveiculos",
+      "columns": {
+        "id": {
+          "autoincrement": true,
+          "name": "id",
+          "type": "bigint(20) unsigned",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "veiID": {
+          "autoincrement": false,
+          "name": "veiID",
+          "type": "bigint(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "placa": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "placa",
+          "type": "char(7)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vs": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "vs",
+          "type": "decimal(4,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tCmd": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tCmd",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tMac": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tMac",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tp": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tp",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ta": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ta",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "eqp": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "eqp",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "loc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "loc",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "vManut": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "vManut",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "valEspelhamento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "valEspelhamento",
+          "type": "date",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "propCancelamento": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "propCancelamento",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "podeCompartilhar": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "podeCompartilhar",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tgsm": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tgsm",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ppc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ppc",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tppc": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "tppc",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ppcMenor60": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "ppcMenor60",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "chassi": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "chassi",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uManut": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "uManut",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "st1": {
+          "default": 0,
+          "autoincrement": false,
+          "name": "st1",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mot": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "mot",
+          "type": "varchar(120)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "created_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "default": "'current_timestamp()'",
+          "autoincrement": false,
+          "name": "updated_at",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {
+        "idx_placa": {
+          "name": "idx_placa",
+          "columns": [
+            "placa"
+          ],
+          "isUnique": false
+        }
+      },
+      "foreignKeys": {},
+      "uniqueConstraints": {
+        "uk_veiid": {
+          "name": "uk_veiid",
+          "columns": [
+            "veiID"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "wms_enderecos_proprietario": {
+      "name": "wms_enderecos_proprietario",
+      "columns": {
+        "cdproprietario": {
+          "autoincrement": false,
+          "name": "cdproprietario",
+          "type": "decimal",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nmproprietario": {
+          "autoincrement": false,
+          "name": "nmproprietario",
+          "type": "varchar(60)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "cdendereco": {
+          "autoincrement": false,
+          "name": "cdendereco",
+          "type": "decimal",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fgbloqueio": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "fgbloqueio",
+          "type": "varchar(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fgocupado": {
+          "autoincrement": false,
+          "name": "fgocupado",
+          "type": "varchar(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "endereco": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "endereco",
+          "type": "varchar(304)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nmendereconv2": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nmendereconv2",
+          "type": "varchar(260)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nmendereconv3": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "nmendereconv3",
+          "type": "varchar(216)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cdmaterialestoque": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "cdmaterialestoque",
+          "type": "varchar(40)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "dsmaterialestoque": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "dsmaterialestoque",
+          "type": "varchar(120)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "zev_workflows": {
+      "name": "zev_workflows",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "masterInstanceId": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "masterInstanceId",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requestName": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requestName",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "reportLink": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "reportLink",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "confirmationCode": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "confirmationCode",
+          "type": "varchar(50)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "uid": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "uid",
+          "type": "char(36)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "simulation": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "simulation",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "active": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "active",
+          "type": "tinyint(1)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flowResult": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "flowResult",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "startDateTime": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "startDateTime",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "endDateTime": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "endDateTime",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "lastFinishedTaskDateTime": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "lastFinishedTaskDateTime",
+          "type": "datetime",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "leadTimeInDays": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "leadTimeInDays",
+          "type": "decimal(10,2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flow_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "flow_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flow_uid": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "flow_uid",
+          "type": "char(36)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flow_name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "flow_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "flow_version": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "flow_version",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_email": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_team_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_team_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_team_name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_team_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_team_code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_team_code",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_position_id": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_position_id",
+          "type": "int(11)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_position_name": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_position_name",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "requester_position_code": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "requester_position_code",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "number_cte": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "number_cte",
+          "type": "varchar(44)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "operation_type": {
+          "default": "'NULL'",
+          "autoincrement": false,
+          "name": "operation_type",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    }
+  },
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {},
+    "indexes": {}
+  }
+}
