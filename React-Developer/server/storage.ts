@@ -24,6 +24,7 @@ type ElogioNormalizado = {
   descricao: string;
   data: Date | string | null;
   pontos: number;
+  carreta?: string | null;
 };
 
 type ElogiosFilters = {
@@ -398,6 +399,7 @@ export class DatabaseStorage {
       motorista: String(r.nome_motorista ?? "Sem nome").trim(),
       cidade: r.cidade,
       estado: r.estado,
+      carreta: r.carreta ?? null,
       descricao: r.elogio,
       data: r.data_hora ?? r.data_registro ?? null,
       pontos: Number(weights.externo),
