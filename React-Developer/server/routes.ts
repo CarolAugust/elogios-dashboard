@@ -168,11 +168,12 @@ app.get("/api/elogios/export/xlsx", async (req, res) => {
     const wsMotoristas = workbook.addWorksheet("Motoristas");
     wsMotoristas.columns = [
       { header: "ID", key: "id", width: 10 },
-      { header: "Tipo", key: "tipo", width: 12 },      // estrada/externo
+      { header: "Tipo", key: "tipo", width: 12 },
       { header: "Pontos", key: "pontos", width: 10 },
       { header: "Motorista", key: "motorista", width: 28 },
       { header: "Cidade", key: "cidade", width: 18 },
       { header: "Estado", key: "estado", width: 10 },
+      { header: "Placa", key: "carreta", width: 18 }, // novo
       { header: "Data", key: "data", width: 18 },
       { header: "Descrição", key: "descricao", width: 50 },
     ];
@@ -180,11 +181,12 @@ app.get("/api/elogios/export/xlsx", async (req, res) => {
     (result.motoristas.data ?? []).forEach((e: any) => {
       wsMotoristas.addRow({
         id: e.id,
-        tipo: (e.tipo ?? "externo"),
+        tipo: e.tipo ?? "externo",
         pontos: Number(e.pontos ?? 0),
         motorista: e.motorista,
         cidade: e.cidade ?? "",
         estado: e.estado ?? "",
+        carreta: e.carreta ?? "", // novo
         data: e.data ? new Date(e.data).toLocaleString("pt-BR") : "",
         descricao: e.descricao ?? "",
       });
