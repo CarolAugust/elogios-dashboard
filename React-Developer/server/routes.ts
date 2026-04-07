@@ -412,8 +412,9 @@ if (elogioType === "estrada" || elogioType === "externo") {
   // ==========================
 
   
- app.post(api.auth.login.path, async (req, res) => {
+app.post(api.auth.login.path, async (req, res) => {
   console.log("REQUISIÇÃO DE LOGIN RECEBIDA!", req.body);
+
   try {
     const input = api.auth.login.input.parse(req.body);
 
@@ -424,10 +425,8 @@ if (elogioType === "estrada" || elogioType === "externo") {
       return res.status(400).json({ message: "Senha obrigatória" });
     }
 
-
-    // ✅ qualquer outro usuário: tem que existir no banco
     const user = await storage.getUserByUsername(username);
-    const matricula = String(user.id);
+
     if (!user) {
       return res.status(401).json({ message: "Usuário ou senha inválidos" });
     }
@@ -436,22 +435,27 @@ if (elogioType === "estrada" || elogioType === "externo") {
       return res.status(401).json({ message: "Usuário ou senha inválidos" });
     }
 
-   const iat = Date.now(); // ms
-  const token = Buffer.from(`${user.username}:${user.role}:${iat}`).toString("base64");
+    const iat = Date.now();
+    const token = Buffer.from(`${user.username}:${user.role}:${iat}`).toString("base64");
 
-        return res.json({
-          token,
-          user: {
-            id: user.id,
-            username: user.username,
-            role: user.role,
-            isManager: user.isManager,
-          },
-        });
-      } catch (err: any) {
-        return res.status(400).json({ message: err?.message ?? "Invalid request" });
-      }
+    return res.json({
+      token,
+      user: {
+        id: user.id,
+        username: user.username,
+        role: user.role,
+        isManager: user.isManager,
+      },
     });
+  } catch (err: any) {
+    console.error("ERRO LOGIN COMPLETO:", err);
+    return res.status(400).json({
+      message: err?.message ?? "Invalid request",
+      error: err?.sqlMessage ?? err?.cause?.message ?? null,
+      code: err?.code ?? null,
+    });
+  }
+});
 
 
   app.post(api.auth.logout.path, async (_req, res) => {

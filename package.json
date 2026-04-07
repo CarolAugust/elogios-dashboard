@@ -1,5 +1,5 @@
 {
-  "dependencies": {
-    "http-proxy-middleware": "^3.0.5"
+  "scripts": {
+  "start:pm2": "tsx server/index.ts"
   }
 }
